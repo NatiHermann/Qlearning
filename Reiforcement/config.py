@@ -1,22 +1,22 @@
 class Config:
     # Reward configs
-    STEP_REWARD = -1
+    STEP_REWARD = -5
     WALL_REWARD = -10
     HOLE_REWARD = -50
     GOAL_REWARD = 100
 
     # Q-Learning configs
-    ALPHA = 0
-    GAMMA = 0
+    ALPHA = 0.2
+    GAMMA = 10
     EPSILON = 0
-    SIMMULATION_NUMBER = 0
+    SIMMULATION_NUMBER = 1
     ALPHA_DECAY = 0
     EPSILON_DECAY = 0
     DECAY_STEP = 0
 
     # Train or Test Model/Agent
     TRAIN = True
-    RENDERS = False
+    RENDERS = True
 
 def STEP_REWARD() -> int:
     return Config.STEP_REWARD
