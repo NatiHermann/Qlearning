@@ -6,7 +6,7 @@ class Config:
     GOAL_REWARD = 100
 
     # Q-Learning configs
-    ALPHA = 0.1
+    ALPHA = 0.9
     GAMMA = 0.95
     EPSILON = 0.9
     SIMMULATION_NUMBER = 2000
