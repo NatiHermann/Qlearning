@@ -1,7 +1,7 @@
 class Config:
     # Reward configs
     STEP_REWARD = -1
-    WALL_REWARD = -5
+    WALL_REWARD = -2
     HOLE_REWARD = -100
     GOAL_REWARD = 100
 
@@ -9,14 +9,14 @@ class Config:
     ALPHA = 0.1
     GAMMA = 0.95
     EPSILON = 0.9
-    SIMMULATION_NUMBER = 2000
+    SIMMULATION_NUMBER = 1000
     ALPHA_DECAY = 0.99
     EPSILON_DECAY = 0.99
     DECAY_STEP = 50
 
     # Train or Test Model/Agent
-    TRAIN = False
-    RENDERS = True
+    TRAIN = True
+    RENDERS = False
 
 def STEP_REWARD() -> int:
     return Config.STEP_REWARD
