@@ -1,7 +1,7 @@
 class Config:
     # Reward configs
     STEP_REWARD = -1
-    WALL_REWARD = -5
+    WALL_REWARD = -2
     HOLE_REWARD = -100
     GOAL_REWARD = 100
 
