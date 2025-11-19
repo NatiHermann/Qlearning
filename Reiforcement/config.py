@@ -6,16 +6,16 @@ class Config:
     GOAL_REWARD = 100
 
     # Q-Learning configs
-    ALPHA = 0.9
-    GAMMA = 0.95
+    ALPHA = 0.5
+    GAMMA = 0.99
     EPSILON = 0.9
     SIMMULATION_NUMBER = 1000
-    ALPHA_DECAY = 0.99
+    ALPHA_DECAY = 0.995
     EPSILON_DECAY = 0.99
     DECAY_STEP = 50
 
     # Train or Test Model/Agent
-    TRAIN = True
+    TRAIN = False
     RENDERS = False
 
 def STEP_REWARD() -> int:
