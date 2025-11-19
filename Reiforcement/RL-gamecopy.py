@@ -266,16 +266,10 @@ else:
 
         while not done:
             action = agent.get_action(state)
-            next_state, reward, done, _, _ = env.step(action, isnumpy = False)
-
-            agent.update(state, action, reward, next_state)
-            state = next_state
-            total_reward += reward
-            if done and env.agent_pos == env.goal_pos:
-                sucess += 1
+            state, reward, done, _, _ = env.step(action, isnumpy = False)
             if RENDERS():
                 env.render()
-    print(f"Episode {episode}, Mean Reward: {(total_reward/episodes):.2f}, Success Rate: {(sucess/episodes):.2f}")
+    print(f"Episode {episode}, Mean Reward: {(total_reward/DECAY_STEP()):.2f}, Success Rate: {(sucess/DECAY_STEP()):.2f}")
     print("Explore Chance (epsilon): ", agent.epsilon)
     print("Exploit Chance (1-epsilon): ", 1-agent.epsilon)
     print("Learning Rate (alpha): ", agent.alpha)

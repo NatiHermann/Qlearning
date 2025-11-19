@@ -271,11 +271,11 @@ else:
             agent.update(state, action, reward, next_state)
             state = next_state
             total_reward += reward
-            if done and env.agent_pos == env.goal_pos:
+            if reward == GOAL_REWARD():
                 sucess += 1
             if RENDERS():
                 env.render()
-    print(f"Episode {episode}, Mean Reward: {(total_reward/episodes):.2f}, Success Rate: {(sucess/episodes):.2f}")
-    print("Explore Chance (epsilon): ", agent.epsilon)
-    print("Exploit Chance (1-epsilon): ", 1-agent.epsilon)
-    print("Learning Rate (alpha): ", agent.alpha)
+    print(f"Episode {episode}, Mean Reward: {(total_reward/episodes()):.2f}, Success Rate: {(sucess/episodes()):.2f}")
+    # print("Explore Chance (epsilon): ", agent.epsilon)
+    # print("Exploit Chance (1-epsilon): ", 1-agent.epsilon)
+    # print("Learning Rate (alpha): ", agent.alpha)
