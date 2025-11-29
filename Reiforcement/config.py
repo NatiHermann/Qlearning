@@ -1,20 +1,19 @@
 class Config:
     # Reward configs
-    STEP_REWARD = -1
-    WALL_REWARD = -5
-    HOLE_REWARD = -100
+    STEP_REWARD = -0.1
+    WALL_REWARD = -2
+    HOLE_REWARD = -80
     GOAL_REWARD = 100
 
     # Q-Learning configs
-    ALPHA = 0.5
-    GAMMA = 0.8
-    EPSILON = 0.8
+    ALPHA = 0.8
+    GAMMA = 0.95
+    EPSILON = 0.9
     SIMMULATION_NUMBER = 1000
-    ALPHA_DECAY = 0.995
+    ALPHA_DECAY = 0.999
     EPSILON_DECAY = 0.995
-    DECAY_STEP = 100
+    DECAY_STEP = 200
 
-    # Train or Test Model/Agent
     TRAIN = False
     RENDERS = False
 
